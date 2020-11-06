@@ -20,6 +20,7 @@ class ArtworksController < ApplicationController
 
   # GET /artworks/1/edit
   def edit
+    authorize! :manage, @artwork
   end
 
   # POST /artworks
@@ -42,6 +43,7 @@ class ArtworksController < ApplicationController
   # PATCH/PUT /artworks/1
   # PATCH/PUT /artworks/1.json
   def update
+    authorize! :manage, @artwork
     respond_to do |format|
       if @artwork.update(artwork_params)
         format.html { redirect_to @artwork, notice: 'Artwork was successfully updated.' }
@@ -56,6 +58,7 @@ class ArtworksController < ApplicationController
   # DELETE /artworks/1
   # DELETE /artworks/1.json
   def destroy
+    authorize! :manage, @artwork
     @artwork.destroy
     respond_to do |format|
       format.html { redirect_to artworks_url, notice: 'Artwork was successfully destroyed.' }
