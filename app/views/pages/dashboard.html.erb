@@ -1,0 +1,34 @@
+<h1>Dashboard</h1>
+
+<div class="row">
+  <div class="col-md-4">
+    <h3>Artworks <%= link_to 'Add New Listing', new_artwork_path, class: 'btn btn-sm btn-outline-info' %></h3>
+    
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Title</th>
+          <th scope="col">Price</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @artworks.each do |artwork| %>
+          <tr>
+            <td><%= artwork.id %></td>
+            <td><%= link_to artwork.title, artwork_path(artwork) %></td>
+            <td>$<%= artwork.price/100 %></td>
+            <td><%= link_to 'Edit', edit_artwork_path(artwork) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-4">
+    <h3>Purchases</h3>
+  </div>
+  <div class="col-md-4">
+    <h3>Sales</h3>
+  </div>
+</div>

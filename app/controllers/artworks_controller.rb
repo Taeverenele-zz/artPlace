@@ -1,4 +1,5 @@
 class ArtworksController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_artwork, only: [:show, :edit, :update, :destroy]
 
   # GET /artworks
@@ -25,7 +26,8 @@ class ArtworksController < ApplicationController
   # POST /artworks.json
   def create
     @artwork = Artwork.new(artwork_params)
-
+    #link current user ID to a new artwork being created
+    @artwork.user_id = current_user.id
     respond_to do |format|
       if @artwork.save
         format.html { redirect_to @artwork, notice: 'Artwork was successfully created.' }
