@@ -2,7 +2,10 @@
 
 <h1>Artworks</h1>
 
-<table>
+<div class="row">
+  <%= render @artworks %>
+</div>
+<!-- <table>
   <thead>
     <tr>
       <th>Title</th>
@@ -30,6 +33,6 @@
   </tbody>
 </table>
 
-<br>
+<br> -->
 
 <%= link_to 'New Artwork', new_artwork_path %>

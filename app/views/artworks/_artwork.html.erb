@@ -1,0 +1,9 @@
+<div class="col-md-3 text-center card">
+  <div class="thumbnail card-img-top">
+    <%= image_tag 'homepage.jpg', class: 'img-fluid' %>
+  </div>
+  <div class="card-body">
+    <h3><%= link_to artwork.title, artwork_path(artwork) %></h3>
+    <p>$<%= artwork.price/100 %></p>
+  </div>
+</div>
