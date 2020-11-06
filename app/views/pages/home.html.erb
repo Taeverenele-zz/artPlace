@@ -1,2 +1,15 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="jumbotron bg-primary text-white text-center">
+  <div class="row">
+    <div class="col-6">
+      <h1>Welcome to artPlace</h1>
+      <hr />
+      <p>Are you an artist looking to sell your art?</p>
+      <p>Or are you an art lover looking to buy art?</p>
+      <p>You are in the right place!</p>
+      <%= link_to 'Gallery', artworks_path, class: 'btn btn-outline-light' %>
+    </div>
+    <div class="col-6">
+      <%= image_tag 'homepage.jpg', class: 'img-fluid' %>
+    </div>
+  </div>
+</div>
