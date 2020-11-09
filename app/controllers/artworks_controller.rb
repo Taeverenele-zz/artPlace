@@ -1,5 +1,4 @@
 class ArtworksController < ApplicationController
-  skip_before_action :verify_authenticity_token, only: [:buy]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_artwork, only: [:show, :edit, :update, :destroy, :buy]
 
@@ -67,37 +66,7 @@ class ArtworksController < ApplicationController
     end
   end
 
-  def buy
-    Stripe.api_key = ENV['STRIPE_API_KEY']
-    session = Stripe::Checkout::Session.create({
-      payment_method_types: ['card'],
-      mode: 'payment',
-      success_url: success_url(params[:id]),
-      cancel_url: cancel_url(params[:id]),
-      line_items: [
-        {
-          price_data: {
-            currency: 'aud',
-            product_data: {
-              name: @artwork.title
-            },
-            unit_amount: (@artwork.price.to_f / 100).to_i
-          },
-          quantity: 1
-        }
-      ]
-    })
-
-    render json: session
-  end
-
-  def success
-    render plain: "Success!"
-  end
-  def cancel
-    render plain: "Transaction was cancelled"
-  end
-
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.
