@@ -15,14 +15,15 @@ admin_user.add_role :admin
 
 # create sample artwork data
 Artwork.destroy_all
-artwork_1 = Artwork.create(title: 'Skribble', author: 'Mary Smith', description: 'A unique skribble created with a pencil', price: 2000, user: user_1)
-artwork_1.image.attach(io: File.open('app/assets/images/scribble.jpg'), filename: 'scribble.jpg')
-artwork_2 = Artwork.create(title: 'Faces', author: 'Mary Smith', description: 'A painting of many faces', price: 3000, user: user_1)
-artwork_2.image.attach(io: File.open('app/assets/images/faces.jpg'), filename: 'faces.jpg')
-artwork_3 = Artwork.create(title: 'My Dog', author: 'Simon Brown', description: 'A painting of my dog', price: 5000, user: user_2)
-artwork_3.image.attach(io: File.open('app/assets/images/dog.jpg'), filename: 'dog.jpg')
-artwork_4 = Artwork.create(title: 'Mountains', author: 'Simon Brown', description: 'Photograph of mountains', price: 500, user: user_2)
-artwork_4.image.attach(io: File.open('app/assets/images/mountains.jpg'), filename: 'mountains.jpg')
-artwork_5 = Artwork.create(title: 'Stick man', author: 'Penny Doe', description: 'A drawing of Stick Man the children;s book character', price: 10000, user: admin_user)
-artwork_5.image.attach(io: File.open('app/assets/images/stickman.jpg'), filename: 'stickman.jpg')
+artwork_1 = Artwork.new(title: 'Skribble', author: 'Mary Smith', description: 'A unique skribble created with a pencil', price: 2000, user: user_1)
+artwork_1.image.attach(io: File.open(File.join(Rails.root, 'app/assets/images/scribble.jpg')), filename: 'scribble.jpg')
+artwork_1.save
+# artwork_2 = Artwork.create(title: 'Faces', author: 'Mary Smith', description: 'A painting of many faces', price: 3000, user: user_1)
+# artwork_2.image.attach(io: File.open('app/assets/images/faces.jpg'), filename: 'faces.jpg')
+# artwork_3 = Artwork.create(title: 'My Dog', author: 'Simon Brown', description: 'A painting of my dog', price: 5000, user: user_2)
+# artwork_3.image.attach(io: File.open('app/assets/images/dog.jpg'), filename: 'dog.jpg')
+# artwork_4 = Artwork.create(title: 'Mountains', author: 'Simon Brown', description: 'Photograph of mountains', price: 500, user: user_2)
+# artwork_4.image.attach(io: File.open('app/assets/images/mountains.jpg'), filename: 'mountains.jpg')
+# artwork_5 = Artwork.create(title: 'Stick man', author: 'Penny Doe', description: 'A drawing of Stick Man the children;s book character', price: 10000, user: admin_user)
+# artwork_5.image.attach(io: File.open('app/assets/images/stickman.jpg'), filename: 'stickman.jpg')
 
