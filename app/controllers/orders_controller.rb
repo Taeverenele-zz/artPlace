@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:buy]
-  before_action :set_artwork, only: [:buy]
+  before_action :set_artwork, only: [:buy, :cancel]
   
   def buy
     Stripe.api_key = ENV['STRIPE_API_KEY']
@@ -27,10 +27,12 @@ class OrdersController < ApplicationController
   end
 
   def success
-    render plain: "Success!"
   end
   def cancel
-    render plain: "Transaction was cancelled"
+    respond_to do |format|
+      format.html { redirect_to artwork_path, notice: 'Transaction was cancelled' }
+      format.json { head :no_content }
+    end
   end
 
   private
