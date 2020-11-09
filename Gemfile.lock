@@ -104,6 +104,8 @@ GEM
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.13.1)
+    friendly_id (5.4.1)
+      activerecord (>= 4.0.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     http-accept (1.7.0)
@@ -264,6 +266,7 @@ DEPENDENCIES
   cloudinary (~> 1.18)
   devise
   dotenv-rails
+  friendly_id (~> 5.4.0)
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.2)

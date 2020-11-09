@@ -39,6 +39,8 @@ gem 'cancancan'
 gem 'stripe'
 gem "cloudinary", "~> 1.18"
 gem "activestorage-cloudinary-service", "~> 0.2.3"
+gem "active_storage_validations", "~> 0.9.0"
+gem 'friendly_id', '~> 5.4.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -66,4 +68,3 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
-gem "active_storage_validations", "~> 0.9.0"
