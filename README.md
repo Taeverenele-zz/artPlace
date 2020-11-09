@@ -1,5 +1,34 @@
 # README
 
+Daily schedule
+Day One
+- Get idea approved
+- Create a sitemap of what the app will look like
+- Write user stories
+- Make wireframes
+- Create a new project
+- Add gems
+- Create GitHub repository
+- Deploy to Heroku
+
+Day Two
+- Plan the ERD
+- Start building the MVP
+  - Users model
+  - Artworks model
+  - style pages
+  - Dashboard
+  - Authorization
+
+Day Three
+- Buy now feature
+- Create Orders 
+- Implement Stripe
+
+Day Four 
+- Implement Active Storage and Cloudinary
+
+
 User Stories
 
 - As an admin user, I want to be able to modify and delete all listings, so that I can have full control over what is being sold on the website.
