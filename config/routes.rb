@@ -5,8 +5,9 @@ Rails.application.routes.draw do
 
   get 'dashboard', to: 'pages#dashboard'
 
-  post "/orders/:id/buy", to: "orders#buy", as: "buy"
-  get "/orders/:id/success", to: "orders#success", as: "success"
-  get "/orders/:id/cancel", to: "orders#cancel", as: "cancel"
+  post "/sales/:id/buy", to: "sales#buy", as: "buy"
+  get "/sales/:id/success", to: "sales#success", as: "success"
+  get "/sales/:id/cancel", to: "sales#cancel", as: "cancel"
+  get "/sales/:id/", to: "sales#show", as: "order"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
