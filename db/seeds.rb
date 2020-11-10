@@ -31,4 +31,9 @@ artwork_5 = Artwork.new(title: 'Stick man', author: 'Penny Doe', description: 'A
 artwork_5.image.attach(io: File.open(File.join(Rails.root, 'app/assets/images/stickman.jpg')), filename: 'stickman.jpg')
 artwork_5.save
 
+art_count = Artwork.count
+user_count = User.count
+puts "Art Created: #{art_count}"
+puts "User Created: #{user_count}"
+
 

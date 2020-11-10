@@ -27,8 +27,46 @@
   </div>
   <div class="col-md-4">
     <h3>Purchases</h3>
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Title</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @purchases.each do |purchase| %>
+          <tr>
+            <td><%= purchase.id %></td>
+            <td><%= purchase.artwork.title %></td>
+            <td>$<%= purchase.amount/100 %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
   <div class="col-md-4">
     <h3>Sales</h3>
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Title</th>
+          <th scope="col">Price</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @artworks.each do |artwork| %>
+          <tr>
+            <td><%= artwork.id %></td>
+            <td><%= link_to artwork.title, artwork_path(artwork) %></td>
+            <td>$<%= artwork.price/100 %></td>
+            <td><%= link_to 'Edit', edit_artwork_path(artwork) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
 </div>
