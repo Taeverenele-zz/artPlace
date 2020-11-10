@@ -1,0 +1,22 @@
+<div class="text-center">
+  <h1>Congrats <%= current_user.first_name %> <%= current_user.last_name %></h1>
+  <h3>Here is your order summary: </h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Image</th>
+        <th scope="col">Order ID</th>
+        <th scope="col">Seller's email</th>
+        <th scope="col">Amount Charged</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> <%= cl_image_tag(@artwork.image.key, height: 300, crop: :scale, cloud_name: 'duclcz5tg', class: 'img-fluid') %></td>
+        <td><%= @sale.id %></td>
+        <td><%= @sale.seller_email %></td>
+        <td>$<%= @sale.amount/100 %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

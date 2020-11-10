@@ -22,11 +22,20 @@ Day Two
 
 Day Three
 - Buy now feature
-- Create Orders 
+- Create OrdersController
 - Implement Stripe
+- Implement Active Storage and Cloudinary
 
 Day Four 
-- Implement Active Storage and Cloudinary
+- Admin user and Authorization with CanCanCan
+- Create success and cancel view for OrdersController
+- Look at destroying artwork when user has bought it
+- Dashboard sales and purchases
+
+Day Five
+- Sort out Navbar responsiveness (hamburger menu)
+
+
 
 
 User Stories
