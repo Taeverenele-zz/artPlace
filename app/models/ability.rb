@@ -7,12 +7,23 @@ class Ability
     # Define abilities for the passed in user here. For example:
     #
       user ||= User.new # guest user (not logged in)
-        # anyone can view the artworks
-        can :read, :all
-        # only the owner of the artwork can manage it
-        can :manage, Artwork do |artwork|
-          artwork.try(:user) == user
-        end
+          if user.client?
+            can :manage, Artwork, user_id: user.id
+          elsif user.admin?
+            can :manage, :all
+          else
+            can :read, :all
+          end
+
+
+
+
+        # # anyone can view the artworks
+        # can :read, :all
+        # # only the owner of the artwork can manage it
+        # can :manage, Artwork do |artwork|
+        #   artwork.try(:user) == user
+        # end
     #   if user.admin?
     #     can :manage, :all
     #   else
