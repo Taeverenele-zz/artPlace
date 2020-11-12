@@ -28,8 +28,7 @@ class SalesController < ApplicationController
   def success
     @sale = @artwork.sales.create!(buyer_email: current_user.email, seller_email: @artwork.user.email, amount: @artwork.price)
     @artwork.availability = false
-    p '***********'
-    p @artwork.availability
+    @artwork.save
     redirect_to order_path(@sale)
   end
   
