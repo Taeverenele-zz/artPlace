@@ -1,6 +1,6 @@
 class SalesController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:buy]
-  before_action :set_artwork, only: [:buy, :cancel, :success]
+  before_action :set_artwork, only: [:buy, :cancel, :success, :show]
   
   def buy
     Stripe.api_key = ENV['STRIPE_API_KEY']
@@ -27,6 +27,9 @@ class SalesController < ApplicationController
   
   def success
     @sale = @artwork.sales.create!(buyer_email: current_user.email, seller_email: @artwork.user.email, amount: @artwork.price)
+    @artwork.availability = false
+    p '***********'
+    p @artwork.availability
     redirect_to order_path(@sale)
   end
   
