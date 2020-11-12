@@ -6,7 +6,7 @@ class ArtworksController < ApplicationController
   # GET /artworks
   # GET /artworks.json
   def index
-    @artworks = Artwork.all.where(availability: true)
+    @artworks = Artwork.all.where(availability: true).limit(8)
   end
 
   # GET /artworks/1
