@@ -27,13 +27,13 @@ artwork_3 = Artwork.new(title: 'My Dog', author: 'Simon Brown', description: 'A 
 artwork_3.image.attach(io: File.open(File.join(Rails.root, 'app/assets/images/dog.jpg')), filename: 'dog.jpg')
 artwork_3.save
 artwork_4 = Artwork.new(title: 'Sheep', author: 'Simon Brown', description: 'A drawing of a blue sheep.', price: 500, user: user_2, availability: true)
-artwork_4.image.attach(io: File.open(File.join(Rails.root, 'app/assets/images/mountains.jpg')), filename: 'mountains.jpg')
+artwork_4.image.attach(io: File.open(File.join(Rails.root, 'app/assets/images/sheep.jpg')), filename: 'sheep.jpg')
 artwork_4.save
 artwork_5 = Artwork.new(title: 'Stick man', author: 'Penny Doe', description: 'A drawing of Stick Man: a childrens book character. Leaves are purple because I did not have a green percil handy at the time.', price: 10000, user: admin_user, availability: true)
 artwork_5.image.attach(io: File.open(File.join(Rails.root, 'app/assets/images/stickman.jpg')), filename: 'stickman.jpg')
 artwork_5.save
 artwork_6 = Artwork.new(title: 'Rainbow', author: 'Mary Smith', description: 'A drawing of a rainbow with all the colours I had available at the time.', price: 2000, user: user_1, availability: true)
-artwork_6.image.attach(io: File.open(File.join(Rails.root, 'app/assets/images/scribble.jpg')), filename: 'scribble.jpg')
+artwork_6.image.attach(io: File.open(File.join(Rails.root, 'app/assets/images/rainbow.jpg')), filename: 'rainbow.jpg')
 artwork_6.save
 artwork_7 = Artwork.new(title: 'Mountains', author: 'Mary Smith', description: 'An intricate drawing of mountains from afar.', price: 3000, user: user_1, availability: true)
 artwork_7.image.attach(io: File.open(File.join(Rails.root, 'app/assets/images/mountains.jpg')), filename: 'mountains.jpg')
