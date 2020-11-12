@@ -7,7 +7,7 @@ class PagesController < ApplicationController
   end
   def dashboard
     @artworks = current_user.artworks
-    p '************'
-    p @purchases = Sale.where(buyer_email: current_user.email)
+    @purchases = Sale.where(buyer_email: current_user.email)
+    @sales = Sale.where(seller_email: current_user.email)
   end
 end

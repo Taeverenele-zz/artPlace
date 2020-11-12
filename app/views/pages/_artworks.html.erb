@@ -1,0 +1,20 @@
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Title</th>
+      <th scope="col">Price</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @artworks.each do |artwork| %>
+      <tr>
+        <td><%= artwork.id %></td>
+        <td><%= link_to artwork.title, artwork_path(artwork) %></td>
+        <td>$<%= artwork.price/100 %></td>
+        <td><%= link_to 'Edit', edit_artwork_path(artwork) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
