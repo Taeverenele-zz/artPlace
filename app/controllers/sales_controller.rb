@@ -1,6 +1,6 @@
 class SalesController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:buy]
-  before_action :set_artwork, only: [:buy, :cancel, :success, :show]
+  before_action :set_artwork, only: [:buy, :cancel, :success]
   
   def buy
     Stripe.api_key = ENV['STRIPE_API_KEY']

@@ -4,6 +4,7 @@
 
 <div class="row">
   <%= render @artworks %>
+  <%= will_paginate @artworks %>
 </div>
 
 <%= link_to 'New Artwork', new_artwork_path %>

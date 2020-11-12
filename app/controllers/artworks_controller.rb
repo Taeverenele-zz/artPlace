@@ -6,7 +6,7 @@ class ArtworksController < ApplicationController
   # GET /artworks
   # GET /artworks.json
   def index
-    @artworks = Artwork.all.where(availability: true).limit(8)
+    @artworks = Artwork.all.where(availability: true).paginate(page: params[:page], per_page: 8)
   end
 
   # GET /artworks/1
