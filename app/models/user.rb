@@ -6,6 +6,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :artworks, dependent: :destroy
 
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+
   after_create :assign_default_role
 
   def assign_default_role
