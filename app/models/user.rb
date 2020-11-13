@@ -5,6 +5,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :artworks, dependent: :destroy
+
+  after_create :assign_default_role
+
+  def assign_default_role
+    add_role(:client)
+  end
   def admin?
     has_role?(:admin)
   end
