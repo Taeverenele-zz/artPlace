@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-lg  -6">
     <% if @artwork.image.attached? %>
     <!-- <%= image_tag @artwork.image, class: 'img-fluid' %> -->
       <%= cl_image_tag(@artwork.image.key, width: 450, crop: :scale, cloud_name: 'duclcz5tg', class: 'img-fluid') %>
@@ -9,7 +9,7 @@
       <%= image_tag 'homepage.jpg', class: 'img-fluid' %>
     <% end %>
   </div>
-  <div class="col-md-6">
+  <div class="col-lg-6">
     <p>
       <strong>Title:</strong>
       <%= @artwork.title %>
