@@ -12,7 +12,7 @@
       <tr>
         <td><%= purchase.artwork.title %></td>
         <td><%= time_ago_in_words(purchase.created_at) %> ago</td>
-        <td>$<%= purchase.amount/100 %></td>
+        <td>$<%= purchase.amount %></td>
         <td><%= link_to 'View', artwork_path(purchase.artwork) %></td>
       </tr>
     <% end %>

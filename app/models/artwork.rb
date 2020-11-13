@@ -5,6 +5,7 @@ class Artwork < ApplicationRecord
   validates :title, length: {minimum: 3, maximum: 20}
   validates :description, length: {minimum: 10, maximum: 200}
   validates :image, attached: true
-  validates :price, numericality: {greater_than: 49, message: " must be greater than 49 cents"}
+  validates :price, numericality: {greater_than: 1, message: " must be greater than 49 cents"}
+  validates :price, numericality: {less_than: 1000, message: " must be less than $1000"}
   attribute :availability, default: true
 end

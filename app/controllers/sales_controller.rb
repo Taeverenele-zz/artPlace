@@ -16,7 +16,7 @@ class SalesController < ApplicationController
             product_data: {
               name: @artwork.title
             },
-            unit_amount: @artwork.price
+            unit_amount: (@artwork.price.to_f * 100).to_i
           },
           quantity: 1
         }

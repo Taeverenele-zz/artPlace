@@ -11,7 +11,7 @@
       <tr>
         <td><%= sale.artwork.title %></td>
         <td><%= time_ago_in_words(sale.created_at) %> ago</td>
-        <td>$<%= sale.buyer_email %></td>
+        <td><%= sale.buyer_email %></td>
       </tr>
     <% end %>
   </tbody>

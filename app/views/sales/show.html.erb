@@ -15,7 +15,7 @@
         <td> <%= cl_image_tag(@artwork.image.key, height: 300, crop: :scale, cloud_name: 'duclcz5tg', class: 'img-fluid') %></td>
         <td><%= @sale.id %></td>
         <td><%= @sale.seller_email %></td>
-        <td>$<%= @sale.amount/100 %></td>
+        <td>$<%= @sale.amount %></td>
       </tr>
     </tbody>
   </table>
