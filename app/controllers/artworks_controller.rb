@@ -1,6 +1,6 @@
 class ArtworksController < ApplicationController
   before_action :authenticate_user!, except: [:index]
-  before_action :set_artwork, only: [:show, :edit, :update, :destroy, :buy]
+  before_action :set_artwork, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource except: [:show]
 
   # GET /artworks

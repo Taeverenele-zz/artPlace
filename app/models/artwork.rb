@@ -1,6 +1,6 @@
 class Artwork < ApplicationRecord
   belongs_to :user
-  has_many :sales, dependent: :destroy
+  has_one :sale, dependent: :destroy
   has_one_attached :image, dependent: :destroy
   validates :title, length: {minimum: 3, maximum: 20}
   validates :description, length: {minimum: 10, maximum: 200}
