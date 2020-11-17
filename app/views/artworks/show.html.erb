@@ -29,8 +29,9 @@
       <strong>Price:</strong>
       $<%= @artwork.price %>
     </p>
-    
-    <p><button id="buynow-button">Buy Now!</button></p>
+    <% if @artwork.availability %>
+      <p><button id="buynow-button">Buy Now!</button></p>
+    <% end %>
 
 <script src="https://js.stripe.com/v3/"></script>
 
