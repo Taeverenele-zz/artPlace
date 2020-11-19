@@ -68,24 +68,24 @@ The website uses strong access controls to assure user's details are kept secure
 
 ## Sitemap
 
-![Sitemap](docs/artWorld_sitemap.png)
+![Sitemap](app/assets/images/docs/artWorld_sitemap.png)
 
 ## Screenshots
 
-![Home Screen for desktop and tablet view](docs/home_tablet_and_desktop.png)
-![Home Screen for mobile view](docs/home_mobile.png)
-![Sign-Up form same for all devices](docs/sign_up_form.png)
-![Sign-In form same for all devices](docs/sign_in_form.png)
-![Gallery View for desktop and tablet view](docs/gallery_tablet_and_desktop.png)
-![Gallery View for mobile view](docs/gallery_mobile.png)
-![Show Screen for desktop and tablet view](docs/show_tablet_and_desktop.png)
-![Show Screen for mobile view](docs/show_mobile.png)
-![Dashboard for desktop view](docs/dashboard_desktop.png)
-![Dashboard for tablet and mobile view](docs/dashboard_tablet_and_mobile.png)
-![Edit Profile Form for all views](docs/edit_profile.png)
-![Payment Screen for desktop view](docs/payment_desktop.png)
-![Payment Screen for tablet and mobile views](docs/payment_tablet_and_mobile.png)
-![Sale Confirmation Screen for all views](docs/sale_confirmation.png)
+![Home Screen for desktop and tablet view](app/assets/images/docs/home_tablet_and_desktop.png)
+![Home Screen for mobile view](app/assets/images/docs/home_mobile.png)
+![Sign-Up form same for all devices](app/assets/images/docs/sign_up_form.png)
+![Sign-In form same for all devices](app/assets/images/docs/sign_in_form.png)
+![Gallery View for desktop and tablet view](app/assets/images/docs/gallery_tablet_and_desktop.png)
+![Gallery View for mobile view](app/assets/images/docs/gallery_mobile.png)
+![Show Screen for desktop and tablet view](app/assets/images/docs/show_tablet_and_desktop.png)
+![Show Screen for mobile view](app/assets/images/docs/show_mobile.png)
+![Dashboard for desktop view](app/assets/images/docs/dashboard_desktop.png)
+![Dashboard for tablet and mobile view](app/assets/images/docs/dashboard_tablet_and_mobile.png)
+![Edit Profile Form for all views](app/assets/images/docs/edit_profile.png)
+![Payment Screen for desktop view](app/assets/images/docs/payment_desktop.png)
+![Payment Screen for tablet and mobile views](app/assets/images/docs/payment_tablet_and_mobile.png)
+![Sale Confirmation Screen for all views](app/assets/images/docs/sale_confirmation.png)
 
 ## Target-Audience
 
@@ -121,19 +121,19 @@ This app is for any hobbyist artist looking to sell their art or anyone looking 
 
 ## Wireframes
 
-![Home Page](docs/home_page.png)
-![Sign-In Page](docs/sign_in.png)
-![Sign-up Page](docs/sign_up.png)
-![Index Page](docs/index_page.png)
-![Show Page](docs/show_page.png)
-![Create Artwork Page](docs/create_artwork.png)
-![Dashboard Page](docs/dashboard.png)
+![Home Page](app/assets/images/docs/home_page.png)
+![Sign-In Page](app/assets/images/docs/sign_in.png)
+![Sign-up Page](app/assets/images/docs/sign_up.png)
+![Index Page](app/assets/images/docs/index_page.png)
+![Show Page](app/assets/images/docs/show_page.png)
+![Create Artwork Page](app/assets/images/docs/create_artwork.png)
+![Dashboard Page](app/assets/images/docs/dashboard.png)
 
 ## R14
 
 ## ERD
 
-![ERD](docs/erd.png)
+![ERD](app/assets/images/docs/erd.png)
 
 ## R15
 
