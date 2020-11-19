@@ -8,12 +8,15 @@
 
 # create samle user data
 User.destroy_all
-user_1 = User.create!(first_name: 'Mary', last_name: 'Smith', email: ENV['USER_1_EMAIL'], password: ENV['USER_1_PASSWORD'])
-user_1.add_role :client
-user_2 = User.create!(first_name: 'Simon', last_name: 'Brown', email: ENV['USER_2_EMAIL'], password: ENV['USER_2_PASSWORD'])
-user_2.add_role :client
-admin_user = User.create!(first_name: 'Penny', last_name: 'Doe', email: ENV['ADMIN_EMAIL'], password: ENV['ADMIN_PASSWORD'])
+admin_user = User.new(first_name: 'Penny', last_name: 'Doe', email: ENV['ADMIN_EMAIL'], password: ENV['ADMIN_PASSWORD'])
 admin_user.add_role :admin
+admin_user.save
+user_1 = User.new(first_name: 'Mary', last_name: 'Smith', email: ENV['USER_1_EMAIL'], password: ENV['USER_1_PASSWORD'])
+user_1.add_role :client
+user_1.save
+user_2 = User.new(first_name: 'Simon', last_name: 'Brown', email: ENV['USER_2_EMAIL'], password: ENV['USER_2_PASSWORD'])
+user_2.add_role :client
+user_2.save
 
 # create sample artwork data
 Artwork.destroy_all
