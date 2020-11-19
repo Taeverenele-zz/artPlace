@@ -56,4 +56,7 @@
 
 
 <%= link_to 'Edit', edit_artwork_path(@artwork) %> |
-<%= link_to 'Back', artworks_path %>
+<%= link_to 'Back', artworks_path %> |
+<% if current_user.has_role? :admin %>
+  <%= link_to 'Destroy', artwork_path(@artwork), data: { confirm: "Are you sure?" }, method: :delete %>
+<% end %>
